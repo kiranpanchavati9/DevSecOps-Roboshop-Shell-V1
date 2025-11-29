@@ -1,21 +1,23 @@
 #!/bin/bash
+if [ "$EUID" -ne 0 ]; then
+  sudo bash "$0" "$@"
+  exit
+fi
 
 echo "Installing MongoDB..."
 
-# Copy repo file
 cp mongo.repo /etc/yum.repos.d/mongo.repo
 
-# Install MongoDB
+rpm --import https://www.mongodb.org/static/pgp/server-7.0.asc
+
 dnf clean all
 dnf makecache
-dnf install -y mongodb-org
+dnf install -y mongodb-org mongodb-org-server
 
-# Update bind IP
-sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
+sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongodb.conf
 
-# Enable + Start service
 systemctl enable mongod
 systemctl restart mongod
 
-# Status Check
-systemctl status mongod
+echo "MongoDB installed successfully!"
+systemctl status mongod --no-pager
