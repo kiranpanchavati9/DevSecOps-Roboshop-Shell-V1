@@ -9,7 +9,7 @@ curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend-v
 cd /usr/share/nginx/html 
 unzip /tmp/frontend.zip
 
-cp nginx.conf /etc/nginx/nginx.conf 
+sudo cp nginx.conf /etc/nginx/nginx.conf
 
 systemctl enable nginx 
 systemctl restart nginx 
