@@ -22,7 +22,7 @@ npm install
 
 
 dnf install mongodb-mongosh -y
-mongosh --host 139.59.15.54 </app/db/master-data.js
+mongosh --host mongod-dev.kiranpanchavati.online </app/db/master-data.js
 
 systemctl daemon-reload
 
