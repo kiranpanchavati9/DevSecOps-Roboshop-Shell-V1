@@ -12,8 +12,9 @@ dnf install mysql-server -y
 systemctl enable mysqld
 systemctl restart mysqld
 
-# Setting root password (EL9 compatible)
-mysql --connect-expired-password -uroot <<EOF
+# Root password already set, so update script to use password
+mysql -uroot -pRoboShop@1 <<EOF
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'RoboShop@1';
 FLUSH PRIVILEGES;
 EOF
+
