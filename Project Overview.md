@@ -1,6 +1,6 @@
 Project is having the following components.
 
-![img.png](img.png)
+![img_8.png](img_8.png)
 
 The following screenshots help us to understand whether our app is working or not after the setup is done.
 
