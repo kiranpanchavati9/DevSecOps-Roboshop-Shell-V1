@@ -10,7 +10,7 @@ The following screenshots help us to understand whether our app is working or no
 
 2. I should be able to register and after registration, it should show the registered user information.
 
-![img_9.png](img_9.png)![img_2.png](img_2.png)
+![img_9.png](img_9.png)
 
 3. Going to categories and any product we should be able to add to cart.
 
