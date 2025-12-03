@@ -57,21 +57,7 @@ Typical deployment setup includes:
 - Node.js, Python, MySQL, MongoDB, Redis, RabbitMQ
 - Systemd service configurations
 - Nginx as reverse proxy
-- Firewall rules for each exposed service
-
----
-
-##  Automation Support
-
-You can deploy RoboShop using different automation tools:
-
-- **Shell Scripting** (DevOps learning path)
-- **Ansible**
-- **Docker / Docker Compose**
-- **Kubernetes**
-- **Terraform + Cloud Infrastructure**
-
-Perfect for hands-on practice in **CI/CD pipelines & automation**.
+- Firewall rules for each exposed service.
 
 ---
 
