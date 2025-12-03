@@ -1,9 +1,7 @@
 dnf module disable nodejs -y
 dnf module enable nodejs:20 -y
 
-
 dnf install nodejs -y
-
 
 useradd roboshop
 
@@ -18,8 +16,6 @@ unzip /tmp/catalogue.zip
 
 cd /app
 npm install
-
-
 
 dnf install mongodb-mongosh -y
 mongosh --host mongod-dev.kiranpanchavati.online </app/db/master-data.js
